@@ -84,7 +84,7 @@ if(mysqli_num_rows($result)>0){
     echo "<table border=2px double><tr><th>ID</th><th>Name</th><th>Description</th><th>Price</th><th></th></tr>";
     while($row=mysqli_fetch_assoc($result)){
     $url_id=$row["Image"];
-    echo "<tr><td>".$row["ID"]."</td><td>".$row["Name"]."</td><td>"."<img src='$url_id' style='width:150px;height:150px;'><br>";
+    echo "<tr><td>".$row["ID"]."</td><td>".$row["Name"]."</td><td>"."<img src='$url_id' style='width:150px;height:150px;'border=2px blue''><br>";
     echo $row["Description"]."</td><td>".$row["Price"]."</td>";
     echo "<td><a href = 'addproduct.php?ID=".$row[ID]."'>ใส่ตะกร้า</td></tr>";
     }

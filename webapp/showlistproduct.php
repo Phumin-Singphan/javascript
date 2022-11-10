@@ -1,3 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP connect Mysql</title>
+    <style>
+        body{
+            display:flex;
+            position: relative;
+            flex-direction:column;
+            background:rgb(255, 127, 209);
+            justify-content:center;
+            align-items:center;
+        }
+        td,tr,th{
+            border: 3px double red;
+            border-radius:10px;
+            position:relative;
+            max-width:auto;
+        }
+        table {
+            border: 8px double red;
+            border-radius:10px;
+            max-width: auto; 
+        }
+        div{
+            margin: 2rem;
+
+        }
+        td,tr{
+            margin: 7px 10px;
+            padding: 0.7rem 0.5rem;
+            
+            
+        }
+        th{
+            background:rgb(3, 99, 211);
+            color:#fff;
+            padding: 0.7rem 0.5rem;
+            font:small-caps 800 22px Arial,sans-serif;
+        }
+        td{
+            background:rgb(3, 158, 255);
+            color:#fff;
+            padding: 0.7rem 0.5rem;
+            font: 600 16px serif;
+        }
+        a{
+            background:rgb(170,150,170);
+            border: 1px solid #ddd;
+            padding:0.1rem 0.2rem;
+            margin: 0.1rem;
+            font:small-caps 200 16px Arial,sans-serif;
+            color:#fff;
+        }
+        h1{
+            margin:2.8% 4.5%;
+            color:#fff;
+            font: 800 20px serif;
+            color:black;
+        }
+        h2{
+            font-size: 50px;
+        }
+    </style>
+</head>
 <?php
 session_start();
 $servername="localhost";
@@ -27,6 +92,8 @@ if(mysqli_num_rows($result)>0){
     }
     echo "<h1>ราคาสินค้าทั้งหมด $total บาท</h1>";
     echo "</table>";
+    echo "<h1>สั่งสินค้าเรียบร้อยแล้ว</h1>";
+    echo"<h2><a href='showproduct.php'>กลับไปหน้าแรก</a></h2>";
 }else{
     echo "0 results";
 }
